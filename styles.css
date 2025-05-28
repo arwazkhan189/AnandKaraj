@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+
+.banner {
+  background: url('./banner.jpg') no-repeat  center / cover;
+  color: white;
+  padding: 30px;
+  height: 250px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+
+.banner h1,
+.banner p {
+  position: relative;
+  z-index: 1;
+}
+
+
+.intro {
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #4b6cb7;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+  background: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fefefe;
+}
+
+/* More distinct section heading */
+.section h2 {
+  background-color: #4b6cb7;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #4b6cb7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3a56a1;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+  .submit-btn {
+    font-size: 18px;
+  }
+}
