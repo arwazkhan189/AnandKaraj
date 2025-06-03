@@ -6,7 +6,7 @@ body {
 
 
 .banner {
-  background: url('./banner.jpg') no-repeat  center / cover;
+  background: url('./banner.jpg') no-repeat center / cover;
   color: white;
   padding: 30px;
   height: 250px;
@@ -20,7 +20,10 @@ body {
 .banner::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 0;
 }
 
@@ -37,7 +40,7 @@ body {
   margin-bottom: 20px;
   border-left: 5px solid #4b6cb7;
   border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -51,7 +54,7 @@ form {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section {
@@ -78,7 +81,9 @@ label {
   color: #333;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -122,10 +127,51 @@ textarea {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-  input, select, textarea {
+
+  input,
+  select,
+  textarea {
     font-size: 16px;
   }
+
   .submit-btn {
     font-size: 18px;
+  }
+}
+
+
+
+.curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('./banner.jpg') no-repeat center center/cover;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: openCurtain 4s forwards;
+}
+
+.curtain-text {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-family: 'Georgia', cursive;
+}
+
+@keyframes openCurtain {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 50% 0 50%);
+    opacity: 0;
   }
 }
