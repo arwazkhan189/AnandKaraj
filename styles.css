@@ -4,17 +4,17 @@ body {
   background: #f9f9f9;
 }
 
-
 .banner {
-  background: url('/Cover\ image.jpg') no-repeat center / cover;
+  background: url('Cover image.jpg') no-repeat center center / cover;
   color: white;
-  padding: 30px;
-  height: 250px;
+  padding: 10vw 5vw;
+  min-height: 250px;
   text-align: center;
   margin-bottom: 10px;
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .banner::before {
@@ -32,7 +32,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
 
 .intro {
   background: #fff;
@@ -124,30 +123,13 @@ textarea {
   background-color: #3a56a1;
 }
 
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-
-  input,
-  select,
-  textarea {
-    font-size: 16px;
-  }
-
-  .submit-btn {
-    font-size: 18px;
-  }
-}
-
-
-
 .curtain {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('./banner.jpg') no-repeat center center/cover;
+  background: url('./banner.jpg') no-repeat center center / cover;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -169,9 +151,34 @@ textarea {
   0% {
     clip-path: inset(0 0 0 0);
   }
-
   100% {
     clip-path: inset(0 50% 0 50%);
     opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    font-size: 18px;
+  }
+
+  .banner {
+    padding: 15vw 5vw;
+    min-height: 180px;
+  }
+
+  .banner h1 {
+    font-size: 6vw;
+  }
+
+  .banner p {
+    font-size: 4vw;
   }
 }

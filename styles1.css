@@ -38,7 +38,7 @@ body {
 
 .logo {
     height: 60px;
-    border-radius: 8px;
+    border-radius: 50%;
 }
 
 /* Navbar */
