@@ -2,345 +2,183 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anand Karaj – Helping Punjabi Families Find Life Partners</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="./logo.jpg" type="image/x-icon">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anand Karaj Matrimony</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles1.css" />
 </head>
 
 <body>
 
-    <div class="curtain">
-        <div class="curtain-text">🙏 Welcome to <em>Anand Karaj</em> 🙏</div>
-    </div>
-
-    <div class="banner">
-    </div>
-
-    <div class="intro">
-        <p>
-        <h4>प्रिय पंजाबी समाज,</h4>
-        <h4>आप सभी को प्रेम और श्रद्धा से भरा प्रणाम। 🙏</h4>
-        <b>गुरु मर्यादा के अनुसार, पवित्र आनंद कारज (सिख विवाह संस्कार) एक ऐसी शुभ विधि है, जिसमें दो आत्माएं केवल
-            एक-दूसरे से ही नहीं, बल्कि अकाल पुरख वाहेगुरु से भी जुड़ जाती हैं। यह केवल एक रिश्ता नहीं, बल्कि सेवा,
-            समर्पण और विश्वास का वचन है।
-
-            हमारी यह छोटी सी सेवा, "आनंद कारज मिलान हेतु विवरण संकलन", पूरे पंजाबी समाज को एकजुट करने का एक विनम्र
-            प्रयास है। इसका उद्देश्य है कि हर योग्य पुत्र-पुत्री को, उनके संस्कार, शिक्षा, और परिवारिक पृष्ठभूमि के
-            अनुरूप एक श्रेष्ठ जीवनसाथी मिले।
-
-            यह कार्य किसी संस्था या स्वार्थ से नहीं, बल्कि गुरु साहिब की प्रेरणा और सेवा भावना से प्रेरित होकर किया जा
-            रहा है।
-
-            आपसे निवेदन है कि इस शुभ कार्य में सहयोग करें — अपने परिवार, मित्रों और रिश्तेदारों तक यह सेवा पहुंचाएं। आइए
-            मिलकर इस सेवा को सार्थक बनाएं और एक सुखद, संस्कारित जीवन की ओर कदम बढ़ाएं।<b>
-
-                <h4>आपका सहयोग ही इस सेवा की असली पूंजी है।</h4>
-
-                <h4>वाहेगुरु जी का आशीर्वाद आप सभी पर बना रहे।</h4>
-                </p>
-
-    </div>
-
-    <form id="biodataForm">
-        <div class="section">
-            <h2>SECTION 1: Family Information</h2>
-            <label>Name of Parent/Guardian Filling the Form</label>
-            <input type="text" name="parent_name" placeholder="Enter the name of parent/guardian filling the form.."
-                required>
-
-            <label>Head of the Family</label>
-            <input type="text" name="head_family" placeholder="Enter the name of the head of the family..." required>
-
-            <label>Family Occupation</label>
-            <input type="text" name="family_occupation" placeholder="Family Occupation" required>
-
-            <label>Residential Address</label>
-            <textarea name="residential_address" placeholder="Enter Address..." required></textarea>
-
-            <label>City / Town / Village</label>
-            <input type="text" name="city" placeholder="city..." required>
-
-            <label>District</label>
-            <input type="text" name="district" placeholder="district..." required>
-
-            <label>State</label>
-            <input type="text" name="state" placeholder="state" required>
-
-            <label>Contact Number</label>
-            <input type="tel" name="contact_number" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
-
-            <label>Total Annual Family Income</label>
-            <input type="text" name="family_income" placeholder="Like 5 LPA..." required>
-
-            <label>Total Number of Children (21 years or older)</label>
-            <input type="number" name="total_children" min="0"
-                placeholder="Enter total number of children (21 years or older)" required>
-
-            <label>How many marriageable children in the family?</label>
-            <select id="marriageableChildren" name="marriageable_children" onchange="showChildren()" required>
-                <option value="0">Select</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-        </div>
-
-        <div id="childrenDetails"></div>
-
-        <div class="section">
-            <h2>SECTION 3: Family Background</h2>
-            <label>Father’s Name</label>
-            <input type="text" name="father_name" placeholder="Enter father's full name" required>
-
-            <label>Father’s Occupation</label>
-            <input type="text" name="father_occupation" placeholder="e.g., Farmer, Businessman, Retired Govt Officer"
-                required>
-
-            <label>Mother’s Name</label>
-            <input type="text" name="mother_name" placeholder="Enter mother's full name" required>
-
-            <label>Mother’s Occupation</label>
-            <input type="text" name="mother_occupation" placeholder="e.g., Homemaker, Teacher, Retired" required>
-
-            <label>Any Siblings?</label>
-            <select name="has_siblings" onchange="toggleSiblingCount(this)">
-                <option value="">Select</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-
-            <div id="sibling_count_section" style="display:none">
-                <label>Number of Brothers</label>
-                <input type="number" name="brothers_count" placeholder="e.g., 2">
-
-                <label>Number of Sisters</label>
-                <input type="number" name="sisters_count" placeholder="e.g., 1">
-            </div>
-
-            <label>Brother(s) Info</label>
-            <textarea name="brothers_info" placeholder="Brief info about each brother"></textarea>
-
-            <label>Sister(s) Info</label>
-            <textarea name="sisters_info" placeholder="Brief info about each sister"></textarea>
-
-            <label>Type of Family</label>
-            <select name="family_type" required>
-                <option>Joint</option>
-                <option>Nuclear</option>
-            </select>
-
-            <label>Family Values</label>
-            <select name="family_values" required>
-                <option>Traditional</option>
-                <option>Moderate</option>
-                <option>Modern</option>
-            </select>
-
-            <label>Total Number of Family Members</label>
-            <input type="number" name="family_members" placeholder="e.g., 6" required>
-
-            <label>House Type <small>(e.g., Own Flat, Rented Flat, Ancestral Home, Bungalow)</small></label>
-            <input type="text" name="house_type" placeholder="e.g., Own Flat" required>
-
-            <label>Residential Address (with landmarks)</label>
-            <textarea name="residential_address_landmark" placeholder="Full address with nearby landmark"
-                required></textarea>
-        </div>
-
-        <div class="section">
-            <h2>SECTION 4: Lifestyle & Personality</h2>
-            <label>Languages Spoken</label>
-            <input type="text" name="languages_spoken" placeholder="e.g., Punjabi, Hindi, English" required>
-
-            <label>Nature/Temperament</label>
-            <select name="temperament" required>
-                <option value="">Select</option>
-                <option>Calm</option>
-                <option>Cheerful</option>
-                <option>Reserved</option>
-                <option>Social</option>
-                <option>Other</option>
-            </select>
-
-            <label>Smoking Habit</label>
-            <select name="smoking" required>
-                <option value="">Select</option>
-                <option>No</option>
-                <option>Yes</option>
-                <option>Occasionally</option>
-            </select>
-
-            <label>Drinking Habit</label>
-            <select name="drinking" required>
-                <option value="">Select</option>
-                <option>No</option>
-                <option>Yes</option>
-                <option>Occasionally</option>
-            </select>
-
-            <label>Any health issues or medical history to disclose?</label>
-            <select name="health_issues" required>
-                <option value="">Select</option>
-                <option>No</option>
-                <option>Yes</option>
-            </select>
-
-            <label>If Yes, please specify</label>
-            <textarea name="health_details" placeholder="Mention health conditions, if any"></textarea>
-
-            <label>Social Media Profile (Optional)</label>
-            <input type="text" name="social_media" placeholder="e.g., Instagram/Facebook profile link">
-        </div>
-
-        <div class="section">
-            <h2>SECTION 5: Religious & Horoscope</h2>
-            <label>Horoscope Matching Required?</label>
-            <select name="horoscope_required" required>
-                <option value="">Select</option>
-                <option>Yes</option>
-                <option>No</option>
-                <option>Optional</option>
-            </select>
-
-            <label>Kundli Available?</label>
-            <select name="kundli_available" required>
-                <option value="">Select</option>
-                <option>Yes</option>
-                <option>No</option>
-            </select>
-
-            <label>Upload Birth Chart (Optional)</label>
-            <input type="file" name="birth_chart">
-        </div>
-
-
-        <div class="section">
-            <h2>SECTION 6: Partner Preferences</h2>
-            <label>Looking Match For</label>
-            <select name="match_for" required>
-                <option value="">Select</option>
-                <option>Son</option>
-                <option>Daughter</option>
-            </select>
-
-            <label>Preferred Location</label>
-            <input type="text" name="preferred_location" placeholder="City / Country preferences" required>
-
-            <label>Preferred Occupation</label>
-            <select name="preferred_occupation" required>
-                <option value="">Select</option>
-                <option>Job</option>
-                <option>Business</option>
-                <option>Homemaker</option>
-                <option>Any</option>
-            </select>
-
-            <label>Preferred Educational Qualification</label>
-            <input type="text" name="preferred_education" placeholder="e.g., Graduate, Postgraduate" required>
-
-            <label>Expected Salary Range or Financial Status</label>
-            <input type="text" name="expected_salary" placeholder="e.g., ₹6-10 LPA or stable income" required>
-
-            <label>Preferred Caste / Religion / Gotra</label>
-            <input type="text" name="preferred_caste" placeholder="Optional preferences">
-
-            <label>Preferred Height & Age Range</label>
-            <input type="text" name="preferred_height_age" placeholder="e.g., 5'3in to 5'8in, 25-30 yrs">
-
-            <label>Diet Preference</label>
-            <select name="diet_preference" required>
-                <option value="">Select</option>
-                <option>Veg</option>
-                <option>Non-Veg</option>
-                <option>Any</option>
-            </select>
-
-            <label>Preference for Nuclear or Joint Family</label>
-            <input type="text" name="family_preference" placeholder="e.g., Joint Family preferred" required>
-
-            <label>Kundli Match Must?</label>
-            <select name="kundli_must" required>
-                <option value="">Select</option>
-                <option>Yes</option>
-                <option>No</option>
-            </select>
-
-            <label>Any Additional Preferences or Expectations</label>
-            <textarea name="additional_preferences"
-                placeholder="Mention specific values, habits, language, region, etc."></textarea>
-        </div>
-
-        <div class="section">
-            <h2>SECTION 7: Upload Documents</h2>
-            <label>Upload Recent Photograph</label>
-            <input type="file" name="photo" required>
-
-            <label>Upload Biodata PDF</label>
-            <input type="file" name="biodata_pdf">
-        </div>
-
-        <div class="section">
-            <h2>SECTION 8: Consent & Reference</h2>
-
-            <label>How did you hear about this form?</label>
-            <select name="reference_source" required>
-                <option value="">Select</option>
-                <option>Friend</option>
-                <option>Social Media</option>
-                <option>Relative</option>
-                <option>Other</option>
-            </select>
-
-            <label>Reference Name & Contact (if any)</label>
-            <input type="text" name="reference_contact" placeholder="Optional: Full Name & Phone Number">
-
-            <div class="checkbox">
-                <input type="checkbox" name="info_confirmed" required> I confirm that the information provided above is
-                true and complete.
-            </div>
-
-            <div class="checkbox">
-                <input type="checkbox" name="consent_given" required> I give consent to share this biodata with suitable
-                families for Anand Karaj.
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#home" class="logo-link">
+                <img src="Logo.jpg" alt="Logo" class="logo" />
+            </a>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#values">Values</a>
+                <a href="#testimonials">Voices</a>
+                <a href="#register">Register</a>
+                <a href="#contact-us">Contact Us</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
+    </header>
 
-        <div class="section">
-            <h2>SECTION 9: Additional Information</h2>
-            <label>If you wish to share any important personal or family information (e.g., separated parents, special
-                conditions), please mention below:</label>
-            <textarea name="extra_info"
-                placeholder="Optional: Mention anything you feel the other family should know."></textarea>
+    <!-- Logo 2 Banner -->
+    <section class="logo2-banner">
+        <img src="Cover image.jpg" alt="Anand Karaj Banner" />
+    </section>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Finding a Partner in Guru Sahib’s Light</h1>
+            <p>A seva-based platform connecting Gursikh souls for the sacred bond of Chhattisgarh Anand Karaj, in accordance with
+                Sikh Rehat Maryada.</p>
+            <a href="#register" class="cta-button">Register Now</a>
         </div>
+    </section>
 
-        <div style="margin-top: 20px; text-align: center;">
-            <p><strong>Note:</strong> आपकी जानकारी हमारे पास पूरी तरह सुरक्षित है। 🙏</p>
-            <p><strong>Contact us:</strong> punjabisamaj129@gmail.com</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-content">
+            <div>
+                <h2>Why This Seva Exists</h2>
+                <p>This website is a panthic seva, created to connect Sikh individuals who seek a marriage rooted in
+                    Gurmat, not glamour. It’s not a dating app or business — just a humble medium to help you find a
+                    life partner on the path of Sikhi.</p>
+            </div>
         </div>
+    </section>
 
-        <button type="submit" class="submit-btn">Submit</button>
-    </form>
+    <!-- Values / Services -->
+    <section id="values" class="services">
+        <div class="container">
+            <h2>What Makes This Seva Unique</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>📿 Gurmat-Centric Values</h3>
+                    <p>Every profile is rooted in Sikhi principles — not superficial traits.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🙏 No Fees, Only Seva</h3>
+                    <p>This platform is run by sevadaars and is entirely free to use.</p>
+                </div>
+                <div class="service-card">
+                    <h3>✅ Profiles Reviewed with Care</h3>
+                    <p>Only those sincerely seeking Anand Karaj are welcome here.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🧡 100% Sikh-Only Matrimony</h3>
+                    <p>We honor the sanctity of Anand Karaj as per Sikh Rehat Maryada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./scripts.js"></script>
+    <!-- Sangat Voices -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Guru Sahib’s Grace</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>“We didn’t expect to find someone so aligned in Gurmat. It was truly Guru Sahib's kirpa through
+                        this platform.”</p>
+                    <h4>– Gursikh Couple</h4>
+                </div>
+                <div class="testimonial">
+                    <p>“Vaheguru Ji di kirpa naal, my daughter found a Gurmukh jeevan saathi here. May this seva
+                        continue to grow.”</p>
+                    <h4>– A Sikh Father</h4>
+                </div>
+                <div class="testimonial">
+                    <p>“This is what the Panth needs today — Gurmat-based matchmaking.”</p>
+                    <h4>– Sangat Reflection</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register -->
+    <section id="register" class="contact">
+        <div class="container">
+            <h2>Create Your Profile</h2>
+            <p>Submit your details on our secure external form to connect with fellow seekers of Chhattisgarh Anand Karaj.</p>
+            <a href="form.html" target="_blank" class="cta-button">Go to Registration Form</a>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact-us" class="contact enhanced-contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have questions or need guidance, we’re here to help. Please reach out to us at:</p>
+            <a href="mailto:punjabisamaj129@gmail.com" class="email-link">punjabisamaj129@gmail.com</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>This platform is a panthic seva – free, non-commercial, and rooted in Sikhi. May Guru Granth Sahib Ji bless
+            every soul seeking Anand Karaj in truth and love.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                const navbar = document.querySelector('.navbar');
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+
+        // Hamburger toggle
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.querySelector('.navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Fade-in on load
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.logo').classList.add('fade-in');
+            document.querySelector('.navbar').classList.add('fade-in');
+            document.querySelector('.hamburger').classList.add('fade-in');
+        });
+
+        // Fade-in on load
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.logo').classList.add('fade-in');
+            document.querySelector('.navbar').classList.add('fade-in');
+            document.querySelector('.hamburger').classList.add('fade-in');
+            document.querySelector('.logo2-banner img').classList.add('fade-in');
+        });
+
+    </script>
 
 </body>
-<footer
-    style="background-color: #4b6cb7; color: white; text-align: center; padding: 20px; margin-top: 40px; border-top: 5px solid #2e4589;">
-    <p style="font-size: 16px; margin: 5px 0;">© <span id="currentYear"></span> Anand Karaj</p>
-    <p style="margin: 5px 0;">Designed & Maintained with ❤️ for the community</p>
-    <p style="margin: 5px 0;">Contact: <a href="mailto:punjabisamaj@gmail.com"
-            style="color: #ffeb3b; text-decoration: underline;">punjabisamaj129@gmail.com</a></p>
-</footer>
-
-<script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-</script>
 
 </html>

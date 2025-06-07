@@ -6,7 +6,7 @@ body {
 
 
 .banner {
-  background: url('./banner.jpg') no-repeat center / cover;
+  background: url('/Cover\ image.jpg') no-repeat center / cover;
   color: white;
   padding: 30px;
   height: 250px;
